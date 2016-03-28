@@ -20,7 +20,7 @@
 	<td><%= page.id %></td>
         <td><%= page.total_visits %></td>
         <td><%= page.total_duration %></td>
-        <td><%= page.total_duration %></td>
+        <td><%= page.total_duration/page.total_visits %></td>
 	<td><%= page.site %></td>
         <td><%= link_to 'Show', page %></td>
         <td><%= link_to 'Edit', edit_page_path(page) %></td>
