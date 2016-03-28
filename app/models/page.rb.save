@@ -1,0 +1,9 @@
+class Page < ActiveRecord::Base
+  belongs_to :site
+
+    def register_visit(duration)
+      self.number_of_visits += 1
+      self.total_visit_time += duration.to_i
+  end
+
+end

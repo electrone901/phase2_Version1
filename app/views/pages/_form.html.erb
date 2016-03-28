@@ -1,0 +1,29 @@
+<%= form_for(@page) do |f| %>
+  <% if @page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+      <ul>
+      <% @page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :total_visits %><br>
+    <%= f.number_field :total_visits %>
+  </div>
+  <div class="field">
+    <%= f.label :total_duration %><br>
+    <%= f.number_field :total_duration %>
+  </div>
+  <div class="field">
+    <%= f.label :site_id %><br>
+    <%= f.text_field :site_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
